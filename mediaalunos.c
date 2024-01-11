@@ -7,8 +7,17 @@ int main()
 {
     float b1,b2,b3,b4,avs,avp,natv,mfinal;
     int natf,natp;
-    //primeiro bimeste
-    printf("Informe as notas de atividades do primeiro bimestre:\nAvaliacao escrita:\n");
+    //bimeste
+    for (int c=1;c<=4;c++){
+    if(c==1){
+        printf("Informe as notas de atividades do primeiro bimestre:\nAvaliacao escrita:\n");
+    }else if(c==2){
+        printf("Informe as notas de atividades do segundo bimestre:\nAvaliacao escrita:\n");
+    }else if(c==3){
+        printf("Informe as notas de atividades do terceiro bimestre:\nAvaliacao escrita:\n");
+    }else if(c==4){
+       printf("Informe as notas de atividades do quarto bimestre:\nAvaliacao escrita:\n"); 
+    }
     scanf("%f",&avs);
     printf("avaliacao pratica:\n");
     scanf("%f",&avp);
@@ -17,42 +26,16 @@ int main()
     printf("Numero de atividades feitas:\n");
     scanf("%d",&natf);
     natv=atividades(natp,natf);
-    b1=bimestre(avs,avp,natv);
-   
-    //primeiro bimeste
-    printf("Informe as notas de atividades do segundo bimestre:\nAvaliacao escrita:\n");
-    scanf("%f",&avs);
-    printf("avaliacao pratica:\n");
-    scanf("%f",&avp);
-    printf("Numero de atividades propostas:\n");
-    scanf("%d",&natp);
-    printf("Numero de atividades feitas:\n");
-    scanf("%d",&natf);
-    natv=atividades(natp,natf);
-    b2=bimestre(avs,avp,natv);
-    //segundo bimestre
-    printf("Informe as notas de atividades do terceiro bimestre:\nAvaliacao escrita:\n");
-    scanf("%f",&avs);
-    printf("avaliacao pratica:\n");
-    scanf("%f",&avp);
-    printf("Numero de atividades propostas:\n");
-    scanf("%d",&natp);
-    printf("Numero de atividades feitas:\n");
-    scanf("%d",&natf);
-    natv=atividades(natp,natf);
-    b3=bimestre(avs,avp,natv);
-    //terceito bimestre
-    printf("Informe as notas de atividades do quarto bimestre:\nAvaliacao escrita:\n");
-    scanf("%f",&avs);
-    printf("avaliacao pratica:\n");
-    scanf("%f",&avp);
-    printf("Numero de atividades propostas:\n");
-    scanf("%d",&natp);
-    printf("Numero de atividades feitas:\n");
-    scanf("%d",&natf);
-    natv=atividades(natp,natf);
-    b4=bimestre(avs,avp,natv);
-    
+    if(c==1){
+        b1=bimestre(avs,avp,natv);
+    }else if(c==2){
+        b2=bimestre(avs,avp,natv);
+    }else if(c==3){
+        b3=bimestre(avs,avp,natv);
+    }else if(c==4){
+        b4=bimestre(avs,avp,natv);
+    }
+    }    
     mfinal=mediafinal(b1,b2,b3,b4);
     //resultados para usuario
     printf("Medias bimestrais\nPrimeiro bimestre:%.2f\nSegundo bimestre:%.2f\nTerceiro bimestre:%.2f\nQuarto bimestre%.2f\nMedia final:%.2f\n",b1,b2,b3,b4,mfinal);
