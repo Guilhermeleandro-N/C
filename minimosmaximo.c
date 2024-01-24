@@ -1,4 +1,4 @@
-
+//Nao entendi como modularizar ess codigo apos fazer, nao foi feito um calculo pra diferenciar minimos e maximos, mas if´s e else´s
 
 #include <stdio.h>
 
